@@ -43,7 +43,7 @@ pipeline {
             steps {
                 echo 'Stopping Development Environment'
                 sh 'sudo docker-compose down'
-                sh 'docker system prune -af'
+                sh 'sudo docker system prune -af'
             }
         }
         stage('Build Docker Image') {
