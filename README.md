@@ -30,7 +30,16 @@ GMAIL_APP_PASS="xxxx" \
 ./jenkins_notify.sh SUCCESS sample-job 10 user@example.com
 ```
 ---
+## Project Photos
+<img width="1883" height="910" alt="image" src="https://github.com/user-attachments/assets/f75261ce-188c-46b2-aacd-750dded38a83" />
 
+<img width="1887" height="923" alt="image" src="https://github.com/user-attachments/assets/0dbad5da-201d-4359-bb84-ff91f673c4ef" />
+
+<img width="1857" height="303" alt="image" src="https://github.com/user-attachments/assets/9d05a48d-8ee8-450e-950a-694e7780c2a5" />
+
+<img width="1895" height="793" alt="image" src="https://github.com/user-attachments/assets/7f11e61f-eac4-4360-a8db-a3747a980edb" />
+
+---
 ## GitHub Badges Block
 <p align="center">
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge">
@@ -44,3 +53,4 @@ GMAIL_APP_PASS="xxxx" \
   💡 Project crafted with passion by <b>sak_shetty</b> 🚀
 </p>
 ---
+**Script Done By sak_shetty**
