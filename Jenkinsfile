@@ -118,7 +118,7 @@ pipeline {
                 '''
             }
         }
-        stage('Deploy Docker Container') {
+        stage('Deploy Docker Container in Production Server') {
             when {
                 allOf {
                     expression { params.ENVIRONMENT == 'prod' }
@@ -126,20 +126,21 @@ pipeline {
                 }
             }
             steps {
-                sh """
+                sh '''
                     echo "🚀 Pulling latest image..."
                     sudo docker pull $DOCKER_IMAGE:latest
 
                     echo "🧹 Removing existing container if running..."
-                    if [ "$(sudo docker ps -aq -f name=${DOCKER_CONTAINER})" ]; then
-                        sudo docker rm -f ${DOCKER_CONTAINER}
+                    if [ "$(sudo docker ps -aq -f name=$DOCKER_CONTAINER)" ]; then
+                        sudo docker rm -f $DOCKER_CONTAINER
                     fi
 
                     echo "✅ Starting new container..."
-                    sudo docker run -d --name ${DOCKER_CONTAINER} -p 8085:8080 $DOCKER_IMAGE:latest
-                """
+                    sudo docker run -d --restart always --name $DOCKER_CONTAINER -p 8085:8080 $DOCKER_IMAGE:latest
+                '''
             }
         }
+
 
         // stage('Remove Docker Container') {
         //     when {
